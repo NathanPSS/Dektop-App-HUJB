@@ -15,7 +15,7 @@ class FunctionaliteButton extends StatelessWidget{
   Widget build(BuildContext context) {
     return Container(
       height: 120,
-      width: 120,
+      width: 136,
      // decoration: BoxDecoration(border: Border.all(color: Colors.red)),
       child: InkWell(
         onTap: action,
@@ -24,7 +24,7 @@ class FunctionaliteButton extends StatelessWidget{
           child: Column(
             children: [
               Container(
-         //     decoration: BoxDecoration(border: Border.all(color: Colors.red)),
+             // decoration: BoxDecoration(border: Border.all(color: Colors.red)),
                 width: 54,
                 height: 54,
                 child: icon,margin: EdgeInsets.only(top: 4),),

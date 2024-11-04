@@ -27,7 +27,7 @@ class _RegisterSetorFormState extends State<RegisterSetorForm> {
   Widget build(BuildContext context) {
     return Form(
       child: Container(
-        decoration: BoxDecoration(border: Border.all(color: Color.fromRGBO(214, 214, 214,1),width: 3)),
+        decoration: BoxDecoration(border: Border.all(color: Color.fromRGBO(162,210,223,1),width: 1),color: Colors.white,borderRadius: BorderRadius.all(Radius.circular(12))),
         margin: EdgeInsets.only(left: getDeviceWith(context: context) * 0.12,top: getDeviceHeight(context: context) * 0.12,bottom: getDeviceHeight(context: context) * 0.2),
         padding: EdgeInsets.only(left: 16,right: 16,top: 16),
         width: getDeviceWith(context: context) * 0.2,
@@ -76,8 +76,9 @@ class _RegisterSetorFormState extends State<RegisterSetorForm> {
                           Navigator.of(context).push(MaterialPageRoute(builder: (
                               ctx) => SelectionScreen()
                           ));
-                        }
+                        } else {
                           showNotificationSnackBarFail(context, "Ocorreu um Erro tente Novamente mais Tarde");
+                        }
                       }
                       );
                     },

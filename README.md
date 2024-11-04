@@ -1,16 +1,10 @@
-# interface_sistema
+# Interface do Sistema
 
-A new Flutter project.
+**interface_sistema** é o aplicativo desktop que contém as funcionalidades administrativas do sistema. Ele foi projetado para uso em várias plataformas, incluindo **Linux**, **Mac** e **Windows**.
 
-## Getting Started
+> **Nota:** O aplicativo foi testado apenas em ambiente de desenvolvimento Linux. Portanto, pode haver bugs ao utilizá-lo em outras plataformas.
 
-This project is a starting point for a Flutter application.
+## Configuração
 
-A few resources to get you started if this is your first Flutter project:
+- Ao inicializar o aplicativo em um **emulador** ou **dispositivo físico**, lembre-se de atualizar a propriedade `API_BASE_URL`. Esta propriedade deve conter a URL que o backend usará para receber as chamadas de API.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.

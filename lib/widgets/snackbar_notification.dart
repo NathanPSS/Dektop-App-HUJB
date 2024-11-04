@@ -5,6 +5,7 @@ import '../global/dimensions_device.dart';
 
 SnackBar notificationSnackBar(BuildContext ctx,Color bgColor,Color textColor,String message){
   return SnackBar(
+    duration: const Duration(seconds: 2),
     backgroundColor: bgColor,
     content: Container(
         alignment: Alignment.center,

@@ -2,7 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:interface_sistema/entitties/administracao/screens/functionalites_screen_administracao.dart';
 import 'package:interface_sistema/entitties/estagiario/screens/functionalites_screen_estagiario.dart';
-import 'package:interface_sistema/entitties/preceptor/functionalites_screen_preceptor.dart';
+import 'package:interface_sistema/entitties/preceptor/screens/functionalites_screen_preceptor.dart';
 import 'package:interface_sistema/entitties/setor/screens/functionalites_screen_setor.dart';
 import 'package:interface_sistema/global/dimensions_device.dart';
 import 'package:interface_sistema/widgets/selection_entity.dart';

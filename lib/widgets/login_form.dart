@@ -28,7 +28,7 @@ class _LoginFormState extends State<LoginForm> {
   Widget build(BuildContext context) {
     return Form(
         child: Container(
-          decoration: BoxDecoration(border: Border.all(color: Color.fromRGBO(214, 214, 214,1),width: 3)),
+          decoration: BoxDecoration(border: Border.all(color: Color.fromRGBO(162,210,223,1),width: 1),color: Colors.white,borderRadius: BorderRadius.all(Radius.circular(12))),
           margin: EdgeInsets.only(left: getDeviceWith(context: context) * 0.12,top: getDeviceHeight(context: context) * 0.2,bottom: getDeviceHeight(context: context) * 0.2),
           padding: EdgeInsets.only(left: 16,right: 16,top: 16),
           width: getDeviceWith(context: context) * 0.2,
@@ -79,16 +79,17 @@ class _LoginFormState extends State<LoginForm> {
              //   decoration: BoxDecoration(border: Border.all(color: Colors.red)),
                   child: ClipRRect(
                     borderRadius: BorderRadius.circular(20),
-                    child: OutlinedButton(
-                        style: OutlinedButton.styleFrom(
+                    child: ElevatedButton(
+                        style: ElevatedButton.styleFrom(
                           backgroundColor: Color.fromRGBO(89,76,239,1)
                         ),
                         onPressed: () {
                           setToken(_usernameFieldController.text, _passwordFieldController.text).then((value) {
                             if(value){
                               Navigator.of(context).push(MaterialPageRoute(builder: (ctx) => SelectionScreen()));
+                            } else {
+                              showNotificationSnackBarFail(context, "Ocorreu um erro  novamente mais tarde");
                             }
-                            showNotificationSnackBarFail(context, "Ocorreu um erro  novamente mais tarde");
                           }
                           );
                         },

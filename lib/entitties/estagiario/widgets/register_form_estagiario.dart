@@ -2,6 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:interface_sistema/entitties/estagiario/api/data_manipulation_estagiario.dart';
+import 'package:interface_sistema/entitties/estagiario/screens/functionalites_screen_estagiario.dart';
 import 'package:interface_sistema/global/dimensions_device.dart';
 import 'package:interface_sistema/screens/selection_screen.dart';
 
@@ -32,7 +33,7 @@ class _RegisterEstagiarioFormState extends State<RegisterEstagiarioForm> {
   Widget build(BuildContext context) {
     return Form(
       child: Container(
-        decoration: BoxDecoration(border: Border.all(color: Color.fromRGBO(214, 214, 214,1),width: 3)),
+        decoration: BoxDecoration(border: Border.all(color: Color.fromRGBO(162,210,223,1),width: 1),color: Colors.white,borderRadius: BorderRadius.all(Radius.circular(12))),
         margin: EdgeInsets.only(left: getDeviceWith(context: context) * 0.12,top: getDeviceHeight(context: context) * 0.12,bottom: getDeviceHeight(context: context) * 0.2),
         padding: EdgeInsets.only(left: 16,right: 16,top: 16),
         width: getDeviceWith(context: context) * 0.2,
@@ -61,6 +62,7 @@ class _RegisterEstagiarioFormState extends State<RegisterEstagiarioForm> {
             ),
             SizedBox(height: getDeviceHeight(context: context) * 0.048),
             TextFormField(
+              obscureText: true,
               keyboardType: TextInputType.number,
               controller: _passwordFieldController,
               decoration: InputDecoration(
@@ -95,8 +97,8 @@ class _RegisterEstagiarioFormState extends State<RegisterEstagiarioForm> {
               //   decoration: BoxDecoration(border: Border.all(color: Colors.red)),
               child: ClipRRect(
                 borderRadius: BorderRadius.circular(20),
-                child: OutlinedButton(
-                    style: OutlinedButton.styleFrom(
+                child: ElevatedButton(
+                    style: ElevatedButton.styleFrom(
                         backgroundColor: Color.fromRGBO(89,76,239,1)
                     ),
                     onPressed: () {
@@ -104,10 +106,13 @@ class _RegisterEstagiarioFormState extends State<RegisterEstagiarioForm> {
                         if(value){
                           showNotificationSnackBar(context,Colors.greenAccent[100]!,Colors.black,"Cadastro Concluido com Sucesso");
                           Navigator.of(context).push(MaterialPageRoute(builder: (
-                              ctx) => SelectionScreen()
+                              ctx) => FunctionalitesScreenEstagiario()
                           ));
+                        } else {
+                          showNotificationSnackBar(context,
+                              Colors.redAccent[100]!, Colors.white,
+                              "Ocorreu um erro tente novamente mais Tarde");
                         }
-                        showNotificationSnackBar(context,Colors.redAccent[100]!, Colors.white, "Ocorreu um erro tente novamente mais Tarde");
                       });
                     },
                     child:  Text('Cadastrar',style: TextStyle(color: Colors.white,
