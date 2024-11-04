@@ -6,5 +6,7 @@
 
 ## Configuração
 
-- Ao inicializar o aplicativo em um **emulador** ou **dispositivo físico**, lembre-se de atualizar a propriedade `API_BASE_URL`. Esta propriedade deve conter a URL que o backend usará para receber as chamadas de API.
+- Crie um arquivo .env na raiz do projeto com a propriedade `API_BASE_URL`
+
+- Preencha essa propriedade com a **URL** do qual o backend irá receber as requisições do aplicativo
 
